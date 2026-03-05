@@ -5,6 +5,7 @@ import SmoothScrolling from "@/components/SmoothScrolling";
 import Preloader from "@/components/Preloader";
 import CustomCursor from "@/components/CustomCursor";
 import { LanguageProvider } from "@/context/LanguageContext";
+import { Analytics } from "@vercel/analytics/next";
 
 const syne = Syne({
   variable: "--font-syne",
@@ -36,6 +37,7 @@ export default function RootLayout({
             {children}
           </SmoothScrolling>
         </LanguageProvider>
+        <Analytics />
       </body>
     </html>
   );
