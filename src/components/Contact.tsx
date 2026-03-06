@@ -34,6 +34,23 @@ export default function Contact() {
                     >
                         {t("contactDesc")}
                     </motion.p>
+
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.5, duration: 0.8 }}
+                        className="mt-12 space-y-4"
+                    >
+                        <div className="flex flex-col">
+                            <span className="text-xs uppercase tracking-[0.3em] text-gray-500 mb-1">{t("email")}</span>
+                            <a href="mailto:bangga.sumarnaa@gmail.com" className="text-xl font-sans hover:text-gray-400 transition-colors">bangga.sumarnaa@gmail.com</a>
+                        </div>
+                        <div className="flex flex-col">
+                            <span className="text-xs uppercase tracking-[0.3em] text-gray-500 mb-1">{t("linkedIn")}</span>
+                            <a href="https://linkedin.com/in/bangga-sumarna-b1528830a/" target="_blank" rel="noopener noreferrer" className="text-xl font-sans hover:text-gray-400 transition-colors">linkedin.com/in/bangga-sumarna</a>
+                        </div>
+                    </motion.div>
                 </div>
 
                 <motion.div

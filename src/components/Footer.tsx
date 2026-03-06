@@ -12,7 +12,7 @@ export default function Footer() {
 
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-10 mb-20">
                     <ul className="flex flex-col gap-4 font-sans text-lg text-gray-400 uppercase tracking-widest">
-                        <li><a href="https://www.linkedin.com/in/bangga-sumarna" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">LinkedIn</a></li>
+                        <li><a href="https://linkedin.com/in/bangga-sumarna-b1528830a/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">LinkedIn</a></li>
                         <li><a href="https://github.com/BanggaSumarna05" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">GitHub</a></li>
                         <li><a href="https://www.instagram.com/bangsurrrrrrr" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Instagram</a></li>
                     </ul>

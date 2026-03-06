@@ -37,12 +37,24 @@ export default function Projects() {
                             transition={{ duration: 0.8, delay: idx * 0.1 }}
                             className="group relative border-b border-gray-800 py-12 cursor-pointer block"
                         >
+                            {/* Floating Image Preview on Hover */}
+                            {project.image && (
+                                <div className="hidden lg:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[250px] pointer-events-none z-0 overflow-hidden rounded-xl opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 ease-out">
+                                    <img
+                                        src={project.image}
+                                        alt={project.title}
+                                        className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                                    />
+                                    <div className="absolute inset-0 bg-black/20" />
+                                </div>
+                            )}
+
                             {/* Hover Glow Effect */}
                             <div
-                                className={`absolute inset-0 bg-gradient-to-r ${project.color} to-transparent opacity-0 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none`}
+                                className={`absolute inset-0 bg-gradient-to-r ${project.color} to-transparent opacity-0 group-hover:opacity-5 transition-opacity duration-500 pointer-events-none`}
                             />
 
-                            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 relative z-10">
+                            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 relative z-10 bg-black/20 backdrop-blur-sm md:backdrop-blur-none md:bg-transparent">
                                 <div className="flex-1">
                                     <span className="text-sm font-sans tracking-widest text-gray-500 mb-2 block uppercase">
                                         {project.category}

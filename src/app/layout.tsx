@@ -17,8 +17,8 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Bangga Sumarna - Portfolio",
-  description: "Web Developer Portfolio of Bangga Sumarna",
+  title: "Bangga Sumarna | Full Stack Developer | Laravel & React Expert",
+  description: "Professional portfolio of Bangga Sumarna, a Full Stack Developer specializing in building scalable web applications with Laravel, React, and modern web technologies.",
 };
 
 export default function RootLayout({

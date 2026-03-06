@@ -55,10 +55,22 @@ export default function ProjectsPage() {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6, delay: idx * 0.1 }}
-                                className="group relative aspect-[16/10] overflow-hidden bg-gray-900 border border-gray-800 rounded-2xl flex flex-col justify-end p-8 md:p-12 hover:border-gray-600 transition-all"
+                                className="group relative aspect-[16/10] overflow-hidden bg-zinc-900 border border-white/5 rounded-2xl flex flex-col justify-end p-8 md:p-12 hover:border-white/20 transition-all shadow-2xl"
                             >
-                                {/* Background Gradient Animation */}
-                                <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-20 transition-opacity duration-500`} />
+                                {/* Background Image */}
+                                {project.image && (
+                                    <div
+                                        className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                                        style={{ backgroundImage: `url('${project.image}')` }}
+                                    >
+                                        <div className="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-colors duration-500" />
+                                    </div>
+                                )}
+
+                                {/* Hover Gradient fallback */}
+                                {!project.image && (
+                                    <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-20 group-hover:opacity-40 transition-opacity duration-500`} />
+                                )}
 
                                 <div className="relative z-10">
                                     <div className="flex justify-between items-start mb-4">
