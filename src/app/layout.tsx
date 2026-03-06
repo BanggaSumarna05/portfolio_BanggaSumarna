@@ -4,6 +4,7 @@ import "./globals.css";
 import SmoothScrolling from "@/components/SmoothScrolling";
 import Preloader from "@/components/Preloader";
 import CustomCursor from "@/components/CustomCursor";
+import MusicPlayer from "@/components/MusicPlayer";
 import { LanguageProvider } from "@/context/LanguageContext";
 
 const syne = Syne({
@@ -33,6 +34,7 @@ export default function RootLayout({
         <LanguageProvider>
           <SmoothScrolling>
             <Preloader />
+            <MusicPlayer />
             <CustomCursor />
             {children}
           </SmoothScrolling>
